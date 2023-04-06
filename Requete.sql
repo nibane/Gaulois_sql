@@ -27,6 +27,12 @@ ORDER BY nom_personnage ASC
 -- 4. Nom des spécialités avec nombre de personnages par spécialité (trié par nombre de
 -- personnages décroissant).
 
+SELECT nom_specialite, COUNT(personnage.id_specialite)
+FROM personnage
+INNER JOIN specialite ON personnage.id_specialite = specialite.id_specialite
+GROUP BY nom_specialite
+
+
 -- 5. Nom, date et lieu des batailles, classées de la plus récente à la plus ancienne (dates affichées
 -- au format jj/mm/aaaa).
 
