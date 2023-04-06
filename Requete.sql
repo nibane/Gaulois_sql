@@ -37,6 +37,9 @@ ORDER BY COUNT(personnage.id_specialite) DESC
 -- 5. Nom, date et lieu des batailles, classées de la plus récente à la plus ancienne (dates affichées
 -- au format jj/mm/aaaa).
 
+SELECT nom_bataille, DATE_FORMAT(date_bataille, "%d/%m/%Y"), nom_lieu
+from bataille
+INNER JOIN lieu ON bataille.id_lieu = lieu.id_lieu
 
 
 -- 6. Nom des potions + coût de réalisation de la potion (trié par coût décroissant).
