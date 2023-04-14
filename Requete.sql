@@ -20,8 +20,7 @@ SELECT nom_personnage, nom_specialite, adresse_personnage, nom_lieu
 FROM  personnage
 INNER JOIN specialite ON personnage.id_specialite = specialite.id_specialite
 INNER JOIN lieu ON lieu.id_lieu = personnage.id_lieu
-ORDER BY nom_lieu ASC
-ORDER BY nom_personnage ASC
+ORDER BY nom_lieu ASC, nom_personnage ASC
 
 
 -- 4. Nom des spécialités avec nombre de personnages par spécialité (trié par nombre de
@@ -43,6 +42,9 @@ INNER JOIN lieu ON bataille.id_lieu = lieu.id_lieu
 
 
 -- 6. Nom des potions + coût de réalisation de la potion (trié par coût décroissant).
+
+
+
 
 -- 7. Nom des ingrédients + coût + quantité de chaque ingrédient qui composent la potion 'Santé'.
 
